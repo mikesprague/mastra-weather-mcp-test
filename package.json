@@ -1,0 +1,63 @@
+{
+  "name": "mastra-weather-mcp-test",
+  "version": "0.1.0",
+  "description": "Test MCP server using Mastra framework that returns weather data.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "do-co:up": "docker-compose -f ./docker-compose.yml up",
+    "do-co:down": "docker-compose -f ./docker-compose.yml down --rmi 'all'",
+    "do-co:dev:up": "docker-compose -f ./docker-compose.dev.yml up",
+    "do-co:dev:down": "docker-compose -f ./docker-compose.dev.yml down --rmi 'all'",
+    "docker:build": "docker build -t mikesprague/mastra-weather-mcp-test:latest --target production --compress --no-cache .",
+    "docker:dev:build": "docker build -t mikesprague/mastra-weather-mcp-test:dev --target development --compress --no-cache .",
+    "mastra:dev": "cross-env MASTRA_TELEMETRY_DISABLED=1 mastra dev",
+    "mastra:build": "cross-env MASTRA_TELEMETRY_DISABLED=1 NODE_ENV=production mastra build",
+    "mastra:lint": "cross-env MASTRA_TELEMETRY_DISABLED=1 mastra lint",
+    "mastra:start": "cross-env NODE_ENV=production mastra start --no-telemetry",
+    "start": "pnpm mastra:build && pnpm mastra:start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Michael Sprague",
+    "email": "mikesprague@gmail.com"
+  },
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@10.12.1",
+  "engines": {
+    "node": ">=22.x",
+    "npm": ">=10.x"
+  },
+  "dependencies": {
+    "@mastra/core": "0.10.6",
+    "@mastra/loggers": "0.10.2",
+    "@mastra/mcp": "0.10.4",
+    "@mastra/memory": "0.10.4",
+    "@mastra/mongodb": "0.11.0",
+    "dotenv": "16.5.0",
+    "zod": "3.25.67"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.0",
+    "@types/node": "24.0.3",
+    "cross-env": "7.0.3",
+    "cz-git": "1.11.2",
+    "mastra": "0.10.6",
+    "tsx": "4.20.3",
+    "typescript": "5.8.3"
+  },
+  "resolutions": {
+    "esbuild": "0.25.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-git"
+    }
+  },
+  "volta": {
+    "node": "24.2.0",
+    "npm": "11.4.2"
+  }
+}

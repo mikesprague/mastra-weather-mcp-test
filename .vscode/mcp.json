@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "mastra": {
+      "command": "npx",
+      "args": ["-y", "@mastra/mcp-docs-server"],
+      "type": "stdio"
+    },
+    "weather": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "http://localhost:4111/api/mcp/weather/mcp"]
+    }
+  }
+}
