@@ -18,8 +18,8 @@ importers:
         specifier: 0.10.2
         version: 0.10.2(@mastra/core@0.10.8(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.67))
       '@mastra/mcp':
-        specifier: 0.10.4
-        version: 0.10.4(@mastra/core@0.10.8(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.67))(zod@3.25.67)
+        specifier: 0.10.5
+        version: 0.10.5(@mastra/core@0.10.8(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.67))(zod@3.25.67)
       '@mastra/memory':
         specifier: 0.11.0
         version: 0.11.0(@mastra/core@0.10.8(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.67))(react@19.1.0)
@@ -564,12 +564,6 @@ packages:
     peerDependencies:
       '@mastra/core': '>=0.10.4-0 <0.11.0'
 
-  '@mastra/mcp@0.10.4':
-    resolution: {integrity: sha512-WAloGPK42TfKNvESpbLv6O6HaSPzbP9zlC/4dh+gHHys88/7oHYLU/9Wb8ME9dRsd8CrC0yJqBdfaIvtCvMI7A==}
-    peerDependencies:
-      '@mastra/core': ^0.10.2-alpha.0
-      zod: ^3.0.0
-
   '@mastra/mcp@0.10.5':
     resolution: {integrity: sha512-YOXptwjquGEjZkbzkYsgxF09YopUHFpg9sPgMasUHMpZ9P9NICDskg48iVtSxA9KEVjQ4bMk50dhBllkGXaN5Q==}
     peerDependencies:
@@ -598,8 +592,8 @@ packages:
       '@mastra/core': ^0.10.2-alpha.0
       zod: ^3.0.0
 
-  '@modelcontextprotocol/sdk@1.13.1':
-    resolution: {integrity: sha512-8q6+9aF0yA39/qWT/uaIj6zTpC+Qu07DnN/lb9mjoquCJsAh6l3HyYqc9O3t2j7GilseOQOQimLg7W3By6jqvg==}
+  '@modelcontextprotocol/sdk@1.13.2':
+    resolution: {integrity: sha512-Vx7qOcmoKkR3qhaQ9qf3GxiVKCEu+zfJddHv6x3dY/9P6+uIwJnmuAur5aB+4FDXf41rRrDnOEGkviX5oYZ67w==}
     engines: {node: '>=18'}
 
   '@mongodb-js/saslprep@1.3.0':
@@ -2370,9 +2364,9 @@ packages:
     resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
     engines: {node: '>=0.8.x'}
 
-  eventsource-parser@3.0.2:
-    resolution: {integrity: sha512-6RxOBZ/cYgd8usLwsEl+EC09Au/9BcmCKYF2/xbml6DNczf7nv0MQb+7BA2F+li6//I+28VNlQR37XfQtcAJuA==}
-    engines: {node: '>=18.0.0'}
+  eventsource-parser@3.0.3:
+    resolution: {integrity: sha512-nVpZkTMM9rF6AQ9gPJpFsNAMt48wIzB5TQgiTLdHiuO8XEDhUgZEhqKlZWXbIzo9VmJ/HvysHqEaVeD5v9TPvA==}
+    engines: {node: '>=20.0.0'}
 
   eventsource@3.0.7:
     resolution: {integrity: sha512-CRT1WTyuQoD771GW56XEZFQ/ZoSfWid1alKGDYMmkt2yl8UXrVR4pspqWNEcqKvVIzg6PAltWjxcSSPrboA4iA==}
@@ -2631,10 +2625,6 @@ packages:
         optional: true
       zod-openapi:
         optional: true
-
-  hono@4.8.0:
-    resolution: {integrity: sha512-NoiHrqJxoe1MYXqW+/0/Q4NCizKj2Ivm4KmX8mOSBtw9UJ7KYaOGKkO7csIwO5UlZpfvVRdcgiMb0GGyjEjtcw==}
-    engines: {node: '>=16.9.0'}
 
   hono@4.8.3:
     resolution: {integrity: sha512-jYZ6ZtfWjzBdh8H/0CIFfCBHaFL75k+KMzaM177hrWWm2TWL39YMYaJgB74uK/niRc866NMlH9B8uCvIo284WQ==}
@@ -4528,24 +4518,10 @@ snapshots:
       pino: 9.7.0
       pino-pretty: 13.0.0
 
-  '@mastra/mcp@0.10.4(@mastra/core@0.10.8(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.67))(zod@3.25.67)':
-    dependencies:
-      '@mastra/core': 0.10.8(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.67)
-      '@modelcontextprotocol/sdk': 1.13.1
-      date-fns: 4.1.0
-      exit-hook: 4.0.0
-      fast-deep-equal: 3.1.3
-      hono: 4.8.0
-      uuid: 11.1.0
-      zod: 3.25.67
-      zod-from-json-schema: 0.0.5
-    transitivePeerDependencies:
-      - supports-color
-
   '@mastra/mcp@0.10.5(@mastra/core@0.10.8(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.67))(zod@3.25.67)':
     dependencies:
       '@mastra/core': 0.10.8(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.67)
-      '@modelcontextprotocol/sdk': 1.13.1
+      '@modelcontextprotocol/sdk': 1.13.2
       date-fns: 4.1.0
       exit-hook: 4.0.0
       fast-deep-equal: 3.1.3
@@ -4602,7 +4578,7 @@ snapshots:
       '@mastra/core': 0.10.8(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.67)
       zod: 3.25.67
 
-  '@modelcontextprotocol/sdk@1.13.1':
+  '@modelcontextprotocol/sdk@1.13.2':
     dependencies:
       ajv: 6.12.6
       content-type: 1.0.5
@@ -6912,11 +6888,11 @@ snapshots:
 
   events@3.3.0: {}
 
-  eventsource-parser@3.0.2: {}
+  eventsource-parser@3.0.3: {}
 
   eventsource@3.0.7:
     dependencies:
-      eventsource-parser: 3.0.2
+      eventsource-parser: 3.0.3
 
   execa@9.6.0:
     dependencies:
@@ -7181,8 +7157,6 @@ snapshots:
     optionalDependencies:
       hono: 4.8.3
       zod: 3.25.67
-
-  hono@4.8.0: {}
 
   hono@4.8.3: {}
 
