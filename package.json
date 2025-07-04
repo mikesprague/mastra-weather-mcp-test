@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@mastra/core": "0.10.10",
-    "@mastra/loggers": "0.10.2",
+    "@mastra/loggers": "0.10.3",
     "@mastra/mcp": "0.10.5",
     "@mastra/memory": "0.11.1",
     "@mastra/mongodb": "0.12.0",
