@@ -37,7 +37,7 @@
     "@mastra/memory": "0.11.1",
     "@mastra/mongodb": "0.12.0",
     "dotenv": "16.5.0",
-    "zod": "3.25.75"
+    "zod": "3.25.76"
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.0",
