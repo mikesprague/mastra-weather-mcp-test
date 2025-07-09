@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.1.0",
-    "@types/node": "24.0.10",
+    "@types/node": "24.0.12",
     "cross-env": "7.0.3",
     "cz-git": "1.11.2",
     "mastra": "0.10.11",
