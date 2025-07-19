@@ -31,7 +31,7 @@
     "npm": ">=10.x"
   },
   "dependencies": {
-    "@mastra/core": "0.10.10",
+    "@mastra/core": "0.10.11",
     "@mastra/loggers": "0.10.3",
     "@mastra/mcp": "0.10.6",
     "@mastra/memory": "0.11.2",

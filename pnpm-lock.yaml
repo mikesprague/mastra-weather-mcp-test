@@ -12,11 +12,11 @@ importers:
   .:
     dependencies:
       '@mastra/core':
-        specifier: 0.10.10
-        version: 0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
+        specifier: 0.10.11
+        version: 0.10.11(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
       '@mastra/loggers':
         specifier: 0.10.3
-        version: 0.10.3(@mastra/core@0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))
+        version: 0.10.3(@mastra/core@0.10.11(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))
       '@mastra/mcp':
         specifier: 0.10.6
         version: 0.10.6(@mastra/core@0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(zod@3.25.76)
@@ -25,7 +25,7 @@ importers:
         version: 0.11.2(@mastra/core@0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(react@19.1.0)
       '@mastra/mongodb':
         specifier: 0.12.0
-        version: 0.12.0(@aws-sdk/credential-providers@3.840.0)(@mastra/core@0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))
+        version: 0.12.0(@aws-sdk/credential-providers@3.840.0)(@mastra/core@0.10.11(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))
       dotenv:
         specifier: 17.1.0
         version: 17.1.0
@@ -118,8 +118,8 @@ packages:
     resolution: {integrity: sha512-0sn/X63Xqqh5D1FYmdSHiS9SkDzTitoGO++/8IFik4xf/jpn4ZQkIoDPvpxFZcLvebMuUa6jAQs4ap4RusKGkg==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/client-sagemaker@3.841.0':
-    resolution: {integrity: sha512-fQjkpPsq0k50k0reLF/B7KaYq+NHV15fZH0hLlIbjNT9X03qJHbaCLQFC1lR0ccR9/abyxUhk/iyqoNWaNVVyA==}
+  '@aws-sdk/client-sagemaker@3.843.0':
+    resolution: {integrity: sha512-03l299V90XKCShXkIGyfPnzJJh+RmcSIVVJVNR/j9ytOrAboXoRlBxcHRuInNP5AFl7kfjdlj+AqkkA6qi9zPw==}
     engines: {node: '>=18.0.0'}
 
   '@aws-sdk/client-sso@3.840.0':
@@ -551,8 +551,8 @@ packages:
     resolution: {integrity: sha512-qC72D4+CDdjGqJvkFMMEAtancHUQ7/d/tAiHf64z8MopFDmcrtbcJuerDtFceuAfQJ2pDSfCKCtbqoGBNnwg0w==}
     engines: {node: '>=8'}
 
-  '@mastra/core@0.10.10':
-    resolution: {integrity: sha512-Pis3uSBqwyDk18Rtr0WCc1WcpTNUnPR/bM8/m98R9s5gw+w/Jk+EEu68hF5GT4eurRvZs2EpJa0vB9dF9+9UnQ==}
+  '@mastra/core@0.10.11':
+    resolution: {integrity: sha512-AbhMsgxEXjSVNSbWHTYD/xewf+PogUg5X/YUkB5w1zMGFUgaxMRDvKgCr2RG0DS/3A9JbfHD3yAx5jyA3pIBqg==}
     engines: {node: '>=20'}
     peerDependencies:
       zod: ^3.0.0
@@ -589,8 +589,8 @@ packages:
     peerDependencies:
       '@mastra/core': '>=0.10.7-0 <0.11.0-0'
 
-  '@mastra/schema-compat@0.10.3':
-    resolution: {integrity: sha512-ro8mp2TqZMp6J2VEnbCBxofUdmQ9kqdCDOHXuI3KiKoUVwohRBaQ+QoJYYKVmvyjQ69gblGaLdxre9OfB2V40Q==}
+  '@mastra/schema-compat@0.10.4':
+    resolution: {integrity: sha512-gn+jI0YxTZjrjTA03ZWgNpMB5iZ96zGiO/iT3zhLNrorUlZzj1dc49rpaVNeBy8u5B6YQmw6NhPkOkh2iU03KQ==}
     peerDependencies:
       ai: ^4.0.0
       zod: ^3.0.0
@@ -2323,7 +2323,7 @@ packages:
   dotenv@16.5.0:
     resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
     engines: {node: '>=12'}
-
+    
   dotenv@17.1.0:
     resolution: {integrity: sha512-tG9VUTJTuju6GcXgbdsOuRhupE8cb4mRgY5JLRCh4MtGoVo3/gfGUtOMwmProM6d0ba2mCFvv+WrpYJV6qgJXQ==}
     engines: {node: '>=12'}
@@ -2658,10 +2658,6 @@ packages:
         optional: true
       zod-openapi:
         optional: true
-
-  hono@4.8.3:
-    resolution: {integrity: sha512-jYZ6ZtfWjzBdh8H/0CIFfCBHaFL75k+KMzaM177hrWWm2TWL39YMYaJgB74uK/niRc866NMlH9B8uCvIo284WQ==}
-    engines: {node: '>=16.9.0'}
 
   hono@4.8.4:
     resolution: {integrity: sha512-KOIBp1+iUs0HrKztM4EHiB2UtzZDTBihDtOF5K6+WaJjCPeaW4Q92R8j63jOhvJI5+tZSMuKD9REVEXXY9illg==}
@@ -3610,8 +3606,8 @@ packages:
   wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
 
-  xstate@5.20.0:
-    resolution: {integrity: sha512-lFQ0fLwVa0OMZnjNP8zUkt2fwIS85ZBNPvxE41APVYhYj0++aTssgmsnTAiBHdKYbgnd6+L8DRTZ9jPZAFPuyw==}
+  xstate@5.20.1:
+    resolution: {integrity: sha512-i9ZpNnm/XhCOMUxae1suT8PjYNTStZWbhmuKt4xeTPaYG5TS0Fz0i+Ka5yxoNPpaHW3VW6JIowrwFgSTZONxig==}
 
   xtend@4.0.2:
     resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
@@ -3797,7 +3793,7 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-sagemaker@3.841.0':
+  '@aws-sdk/client-sagemaker@3.843.0':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
@@ -4431,12 +4427,12 @@ snapshots:
     dependencies:
       '@lukeed/csprng': 1.1.0
 
-  '@mastra/core@0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)':
+  '@mastra/core@0.10.11(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)':
     dependencies:
       '@ai-sdk/provider': 1.1.3
       '@ai-sdk/provider-utils': 2.2.8(zod@3.25.76)
       '@ai-sdk/ui-utils': 1.2.11(zod@3.25.76)
-      '@mastra/schema-compat': 0.10.3(ai@4.3.16(react@19.1.0)(zod@3.25.76))(zod@3.25.76)
+      '@mastra/schema-compat': 0.10.4(ai@4.3.17(react@19.1.0)(zod@3.25.76))(zod@3.25.76)
       '@opentelemetry/api': 1.9.0
       '@opentelemetry/auto-instrumentations-node': 0.59.0(@opentelemetry/api@1.9.0)(@opentelemetry/core@2.0.1(@opentelemetry/api@1.9.0))
       '@opentelemetry/core': 2.0.1(@opentelemetry/api@1.9.0)
@@ -4451,19 +4447,19 @@ snapshots:
       '@opentelemetry/sdk-trace-node': 2.0.1(@opentelemetry/api@1.9.0)
       '@opentelemetry/semantic-conventions': 1.34.0
       '@sindresorhus/slugify': 2.2.1
-      ai: 4.3.16(react@19.1.0)(zod@3.25.76)
+      ai: 4.3.17(react@19.1.0)(zod@3.25.76)
       cohere-ai: 7.17.1
       date-fns: 3.6.0
-      dotenv: 16.5.0
-      hono: 4.8.3
-      hono-openapi: 0.4.8(hono@4.8.3)(openapi-types@12.1.3)(zod@3.25.76)
+      dotenv: 16.6.1
+      hono: 4.8.4
+      hono-openapi: 0.4.8(hono@4.8.4)(openapi-types@12.1.3)(zod@3.25.76)
       json-schema: 0.4.0
       json-schema-to-zod: 2.6.1
       pino: 9.7.0
       pino-pretty: 13.0.0
       radash: 12.1.1
       sift: 17.1.3
-      xstate: 5.20.0
+      xstate: 5.20.1
       zod: 3.25.76
       zod-to-json-schema: 3.24.6(zod@3.25.76)
     transitivePeerDependencies:
@@ -4515,9 +4511,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@mastra/loggers@0.10.3(@mastra/core@0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))':
+  '@mastra/loggers@0.10.3(@mastra/core@0.10.11(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))':
     dependencies:
-      '@mastra/core': 0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
+      '@mastra/core': 0.10.11(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
       pino: 9.7.0
       pino-pretty: 13.0.0
 
@@ -4551,7 +4547,7 @@ snapshots:
 
   '@mastra/memory@0.11.2(@mastra/core@0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(react@19.1.0)':
     dependencies:
-      '@mastra/core': 0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
+      '@mastra/core': 0.10.11(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
       '@upstash/redis': 1.35.1
       ai: 4.3.17(react@19.1.0)(zod@3.25.76)
       js-tiktoken: 1.0.20
@@ -4566,9 +4562,9 @@ snapshots:
       - pg-native
       - react
 
-  '@mastra/mongodb@0.12.0(@aws-sdk/credential-providers@3.840.0)(@mastra/core@0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))':
+  '@mastra/mongodb@0.12.0(@aws-sdk/credential-providers@3.840.0)(@mastra/core@0.10.11(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))':
     dependencies:
-      '@mastra/core': 0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
+      '@mastra/core': 0.10.11(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
       '@types/mongodb': 4.0.7(@aws-sdk/credential-providers@3.840.0)
       cloudflare: 4.4.1
       mongodb: 6.17.0(@aws-sdk/credential-providers@3.840.0)
@@ -4583,9 +4579,9 @@ snapshots:
       - snappy
       - socks
 
-  '@mastra/schema-compat@0.10.3(ai@4.3.16(react@19.1.0)(zod@3.25.76))(zod@3.25.76)':
+  '@mastra/schema-compat@0.10.4(ai@4.3.17(react@19.1.0)(zod@3.25.76))(zod@3.25.76)':
     dependencies:
-      ai: 4.3.16(react@19.1.0)(zod@3.25.76)
+      ai: 4.3.17(react@19.1.0)(zod@3.25.76)
       json-schema: 0.4.0
       zod: 3.25.76
       zod-from-json-schema: 0.0.5
@@ -4593,7 +4589,7 @@ snapshots:
 
   '@mastra/server@0.10.11(@mastra/core@0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(zod@3.25.76)':
     dependencies:
-      '@mastra/core': 0.10.10(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
+      '@mastra/core': 0.10.11(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
       zod: 3.25.76
 
   '@modelcontextprotocol/sdk@1.15.0':
@@ -6743,7 +6739,7 @@ snapshots:
 
   cohere-ai@7.17.1:
     dependencies:
-      '@aws-sdk/client-sagemaker': 3.841.0
+      '@aws-sdk/client-sagemaker': 3.843.0
       '@aws-sdk/credential-providers': 3.840.0
       '@aws-sdk/protocol-http': 3.374.0
       '@aws-sdk/signature-v4': 3.374.0
@@ -6862,8 +6858,6 @@ snapshots:
       dequal: 2.0.3
 
   diff-match-patch@1.0.5: {}
-
-  dotenv@16.5.0: {}
 
   dotenv@17.1.0: {}
 
@@ -7206,15 +7200,13 @@ snapshots:
 
   help-me@5.0.0: {}
 
-  hono-openapi@0.4.8(hono@4.8.3)(openapi-types@12.1.3)(zod@3.25.76):
+  hono-openapi@0.4.8(hono@4.8.4)(openapi-types@12.1.3)(zod@3.25.76):
     dependencies:
       json-schema-walker: 2.0.0
       openapi-types: 12.1.3
     optionalDependencies:
-      hono: 4.8.3
+      hono: 4.8.4
       zod: 3.25.76
-
-  hono@4.8.3: {}
 
   hono@4.8.4: {}
 
@@ -8177,7 +8169,7 @@ snapshots:
 
   wrappy@1.0.2: {}
 
-  xstate@5.20.0: {}
+  xstate@5.20.1: {}
 
   xtend@4.0.2: {}
 
