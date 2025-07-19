@@ -33,18 +33,18 @@
   "dependencies": {
     "@mastra/core": "0.10.11",
     "@mastra/loggers": "0.10.3",
-    "@mastra/mcp": "0.10.5",
-    "@mastra/memory": "0.11.1",
+    "@mastra/mcp": "0.10.6",
+    "@mastra/memory": "0.11.2",
     "@mastra/mongodb": "0.12.0",
-    "dotenv": "16.5.0",
+    "dotenv": "17.1.0",
     "zod": "3.25.76"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.0",
-    "@types/node": "24.0.10",
+    "@biomejs/biome": "2.1.1",
+    "@types/node": "24.0.12"
     "cross-env": "7.0.3",
     "cz-git": "1.11.2",
-    "mastra": "0.10.10",
+    "mastra": "0.10.11",
     "tsx": "4.20.3",
     "typescript": "5.8.3"
   },
