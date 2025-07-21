@@ -1,0 +1,112 @@
+name: Build & Deploy
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: "22.x"
+  AZURE_WEBAPP_NAME: "ct-mcp-server"
+  AZURE_WEBAPP_PACKAGE_PATH: "."
+  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+  AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+  AZURE_OPENAI_API_VERSION: ${{ secrets.AZURE_OPENAI_API_VERSION }}
+  AZURE_OPENAI_GPT41_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_GPT41_DEPLOYMENT }}
+  AZURE_OPENAI_GPT41_MINI_DEPLOYMENT: ${{ secrets.AZURE_OPENAI_GPT41_MINI_DEPLOYMENT }}
+  MS_TEAMS_WEBHOOK_URL: ${{ secrets.MS_TEAMS_WEBHOOK_URL }}
+  APP_DISPLAY_NAME: "MCP Weather Server Test"
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: "production"
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📤 Notify Teams
+        uses: mikesprague/teams-incoming-webhook-action@v1
+        with:
+          github-token: ${{ github.token }}
+          webhook-url: ${{ env.MS_TEAMS_WEBHOOK_URL }}
+          deploy-card: true
+          title: ${{ env.APP_DISPLAY_NAME }} Deployment Started
+          color: info
+
+      - name: 👷 Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: 🏗️ Setup Node.js ${{ env.NODE_VERSION }} environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+          check-latest: true
+
+      - name: ⚡  Cache node_modules and .next folder
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ github.workspace }}/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.ts') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-
+
+      - name: ⬆️ Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        shell: bash
+        run: pnpm install
+
+      - name: 🛠️ Build app
+        shell: bash
+        run: pnpm mastra:build
+
+      - name: 📦 Zip all files for deployment step
+        run: (cd .mastra/output && zip ../../${{ env.AZURE_WEBAPP_NAME}}.zip -qr .)
+
+      - name: 🚀 Deploy to Azure App Service
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ env.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/${{ env.AZURE_WEBAPP_NAME}}.zip
+          type: zip
+
+      - name: ⚠️ Cancelled Notification
+        if: ${{ cancelled() }}
+        uses: mikesprague/teams-incoming-webhook-action@v1
+        with:
+          github-token: ${{ github.token }}
+          webhook-url: ${{ env.MS_TEAMS_WEBHOOK_URL }}
+          deploy-card: true
+          title: ${{ env.APP_DISPLAY_NAME }} Deployment Cancelled
+          color: warning
+
+      - name: ⛔ Failure Notification
+        if: ${{ failure() }}
+        uses: mikesprague/teams-incoming-webhook-action@v1
+        with:
+          github-token: ${{ github.token }}
+          webhook-url: ${{ env.MS_TEAMS_WEBHOOK_URL }}
+          deploy-card: true
+          title: ${{ env.APP_DISPLAY_NAME }} Deployment Failed
+          color: failure
+
+      - name: 🎉 Success Notification
+        if: ${{ success() }}
+        uses: mikesprague/teams-incoming-webhook-action@v1
+        with:
+          github-token: ${{ github.token }}
+          webhook-url: ${{ env.MS_TEAMS_WEBHOOK_URL }}
+          deploy-card: true
+          title: ${{ env.APP_DISPLAY_NAME }} Deployment Successful
+          color: success
