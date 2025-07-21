@@ -51,7 +51,7 @@ jobs:
           cache: "pnpm"
           check-latest: true
 
-      - name: ⚡  Cache node_modules and .next folder
+      - name: ⚡  Cache node_modules
         id: cache
         uses: actions/cache@v4
         with:
@@ -70,7 +70,7 @@ jobs:
         run: pnpm mastra:build
 
       - name: 📦 Zip all files for deployment step
-        run: (cd .mastra/output && zip ../../${{ env.AZURE_WEBAPP_NAME}}.zip -qr .)
+        run: cd .mastra/output && zip ../../${{ env.AZURE_WEBAPP_NAME}}.zip -r .
 
       - name: 🚀 Deploy to Azure App Service
         id: deploy-to-webapp
