@@ -27,8 +27,8 @@ importers:
         specifier: 0.11.3
         version: 0.11.3(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(react@19.1.0)
       '@mastra/mongodb':
-        specifier: 0.12.0
-        version: 0.12.0(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))
+        specifier: 0.12.1
+        version: 0.12.1(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))
       dotenv:
         specifier: 17.2.0
         version: 17.2.0
@@ -453,8 +453,8 @@ packages:
     peerDependencies:
       '@mastra/core': '>=0.10.9-0 <0.11.0-0'
 
-  '@mastra/mongodb@0.12.0':
-    resolution: {integrity: sha512-mVBPoXdF++B9kX+TQYMBLWkjclOxC/uQlSbtqowZE2zZJtzUqhhsL61mXZ9dEiUyYVlTEtaZB9EOk8RdyeS4Rw==}
+  '@mastra/mongodb@0.12.1':
+    resolution: {integrity: sha512-o+G6fdp70vvo0yFn+dddEolSqACicjeLo/YFfRdCYYnMpTtnpiPPrsMU+7PqbHFulRZ28SAMKqzeV/Z53j0BRw==}
     peerDependencies:
       '@mastra/core': '>=0.10.7-0 <0.11.0-0'
 
@@ -2534,8 +2534,8 @@ packages:
   mongodb-connection-string-url@3.0.2:
     resolution: {integrity: sha512-rMO7CGo/9BFwyZABcKAWL8UJwH/Kc2x0g72uhDWzG48URRax5TCIcJ7Rc3RZqffZzO/Gwff/jyKwCU9TN8gehA==}
 
-  mongodb@6.17.0:
-    resolution: {integrity: sha512-neerUzg/8U26cgruLysKEjJvoNSXhyID3RvzvdcpsIi2COYM3FS3o9nlH7fxFtefTb942dX3W9i37oPfCVj4wA==}
+  mongodb@6.18.0:
+    resolution: {integrity: sha512-fO5ttN9VC8P0F5fqtQmclAkgXZxbIkYRTUi1j8JO6IYwvamkhtYDilJr35jOPELR49zqCJgXZWwCtW7B+TM8vQ==}
     engines: {node: '>=16.20.1'}
     peerDependencies:
       '@aws-sdk/credential-providers': ^3.188.0
@@ -3687,12 +3687,12 @@ snapshots:
       - pg-native
       - react
 
-  '@mastra/mongodb@0.12.0(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))':
+  '@mastra/mongodb@0.12.1(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))':
     dependencies:
       '@mastra/core': 0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
       '@types/mongodb': 4.0.7
       cloudflare: 4.5.0
-      mongodb: 6.17.0
+      mongodb: 6.18.0
       uuid: 11.1.0
     transitivePeerDependencies:
       - '@aws-sdk/credential-providers'
@@ -5270,7 +5270,7 @@ snapshots:
 
   '@types/mongodb@4.0.7':
     dependencies:
-      mongodb: 6.17.0
+      mongodb: 6.18.0
     transitivePeerDependencies:
       - '@aws-sdk/credential-providers'
       - '@mongodb-js/zstd'
@@ -6212,7 +6212,7 @@ snapshots:
       '@types/whatwg-url': 11.0.5
       whatwg-url: 14.2.0
 
-  mongodb@6.17.0:
+  mongodb@6.18.0:
     dependencies:
       '@mongodb-js/saslprep': 1.3.0
       bson: 6.10.4
