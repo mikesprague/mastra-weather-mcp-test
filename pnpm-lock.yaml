@@ -27,8 +27,8 @@ importers:
         specifier: 0.11.4
         version: 0.11.4(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(react@19.1.0)
       '@mastra/mongodb':
-        specifier: 0.12.1
-        version: 0.12.1(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))
+        specifier: 0.12.2
+        version: 0.12.2(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))
       dotenv:
         specifier: 17.2.0
         version: 17.2.0
@@ -453,10 +453,10 @@ packages:
     peerDependencies:
       '@mastra/core': '>=0.10.9-0 <0.11.0-0'
 
-  '@mastra/mongodb@0.12.1':
-    resolution: {integrity: sha512-o+G6fdp70vvo0yFn+dddEolSqACicjeLo/YFfRdCYYnMpTtnpiPPrsMU+7PqbHFulRZ28SAMKqzeV/Z53j0BRw==}
+  '@mastra/mongodb@0.12.2':
+    resolution: {integrity: sha512-vNcITXwl79Poc1t7sLewQl1SZEAiT72lHW+m18pb2r8jZ1Z72z8UpnBxpzgiPKyIHmc88BU8+i28etk32XI5GQ==}
     peerDependencies:
-      '@mastra/core': '>=0.10.7-0 <0.11.0-0'
+      '@mastra/core': '>=0.10.7-0 <0.12.0-0'
 
   '@mastra/schema-compat@0.10.5':
     resolution: {integrity: sha512-Qhz8W4Hz7b9tNoVW306NMzotVy11bya1OjiTN+pthj00HZoaH7nmK8SWBiX4drS+PyhIqA16X5AenELe2QgZag==}
@@ -3680,7 +3680,7 @@ snapshots:
       - pg-native
       - react
 
-  '@mastra/mongodb@0.12.1(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))':
+  '@mastra/mongodb@0.12.2(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))':
     dependencies:
       '@mastra/core': 0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
       '@types/mongodb': 4.0.7

@@ -36,7 +36,7 @@
     "@mastra/loggers": "0.10.3",
     "@mastra/mcp": "0.10.6",
     "@mastra/memory": "0.11.4",
-    "@mastra/mongodb": "0.12.1",
+    "@mastra/mongodb": "0.12.2",
     "dotenv": "17.2.0",
     "zod": "3.25.76"
   },
