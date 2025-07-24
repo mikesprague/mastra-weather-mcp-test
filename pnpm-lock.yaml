@@ -24,8 +24,8 @@ importers:
         specifier: 0.10.7
         version: 0.10.7(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(zod@3.25.76)
       '@mastra/memory':
-        specifier: 0.11.4
-        version: 0.11.4(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(react@19.1.0)
+        specifier: 0.11.5
+        version: 0.11.5(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(react@19.1.0)
       '@mastra/mongodb':
         specifier: 0.12.2
         version: 0.12.2(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))
@@ -453,10 +453,10 @@ packages:
       '@mastra/core': '>=0.10.2-0 <0.12.0-0'
       zod: ^3.0.0
 
-  '@mastra/memory@0.11.4':
-    resolution: {integrity: sha512-D+ri+dGBd5i594EvCs34A8Jh7Dlgdr//7cIa9dhIurwMGViooLTt/ODG5zXzmUflZba7VkrJBU2DwanyKqUlzQ==}
+  '@mastra/memory@0.11.5':
+    resolution: {integrity: sha512-LW3Wxygm/Abw0Hku9rL/C4csia4APZiQ6JzoCNr9lbTQNFlfjHZRrB86R9zYH13VD0H5JKbWvgDR7Cw1HnXmBA==}
     peerDependencies:
-      '@mastra/core': '>=0.10.9-0 <0.11.0-0'
+      '@mastra/core': '>=0.10.9-0 <0.12.0-0'
 
   '@mastra/mongodb@0.12.2':
     resolution: {integrity: sha512-vNcITXwl79Poc1t7sLewQl1SZEAiT72lHW+m18pb2r8jZ1Z72z8UpnBxpzgiPKyIHmc88BU8+i28etk32XI5GQ==}
@@ -1358,33 +1358,33 @@ packages:
   '@protobufjs/utf8@1.1.0':
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
 
-  '@redis/bloom@5.6.0':
-    resolution: {integrity: sha512-l13/d6BaZDJzogzZJEphIeZ8J0hpQpjkMiozomTm6nJiMNYkoPsNOBOOQua4QsG0fFjyPmLMDJFPAp5FBQtTXg==}
+  '@redis/bloom@5.6.1':
+    resolution: {integrity: sha512-5/22U76IMEfn6TeZ+uvjXspHw+ykBF0kpBa8xouzeHaQMXs/auqBUOEYzU2VKYDvnd2RSpPTyIg82oB7PpUgLg==}
     engines: {node: '>= 18'}
     peerDependencies:
-      '@redis/client': ^5.6.0
+      '@redis/client': ^5.6.1
 
-  '@redis/client@5.6.0':
-    resolution: {integrity: sha512-wmP9kCFElCSr4MM4+1E4VckDuN4wLtiXSM/J0rKVQppajxQhowci89RGZr2OdLualowb8SRJ/R6OjsXrn9ZNFA==}
+  '@redis/client@5.6.1':
+    resolution: {integrity: sha512-bWHmSFIJ5w1Y4aHsYs46XMDHKQsBHFRhNcllYaBxz2Zl+lu+gbm5yI9BqxvKh48bLTs/Wx1Kns0gN2WIasE8MA==}
     engines: {node: '>= 18'}
 
-  '@redis/json@5.6.0':
-    resolution: {integrity: sha512-YQN9ZqaSDpdLfJqwzcF4WeuJMGru/h4WsV7GeeNtXsSeyQjHTyDxrd48xXfRRJGv7HitA7zGnzdHplNeKOgrZA==}
-    engines: {node: '>= 18'}
-    peerDependencies:
-      '@redis/client': ^5.6.0
-
-  '@redis/search@5.6.0':
-    resolution: {integrity: sha512-sLgQl92EyMVNHtri5K8Q0j2xt9c0cO9HYurXz667Un4xeUYR+B/Dw5lLG35yqO7VvVxb9amHJo9sAWumkKZYwA==}
+  '@redis/json@5.6.1':
+    resolution: {integrity: sha512-cTggVzPIVuiFeXcEcnTRiUzV7rmUvM9KUYxWiHyjsAVACTEUe4ifKkvzrij0H/z3ammU5tfGACffDB3olBwtVA==}
     engines: {node: '>= 18'}
     peerDependencies:
-      '@redis/client': ^5.6.0
+      '@redis/client': ^5.6.1
 
-  '@redis/time-series@5.6.0':
-    resolution: {integrity: sha512-tXABmN1vu4aTNL3WI4Iolpvx/5jgil2Bs31ozvKblT+jkUoRkk8ykmYo9Pv/Mp7Gk6/Qkr/2rMgVminrt/4BBQ==}
+  '@redis/search@5.6.1':
+    resolution: {integrity: sha512-+eOjx8O2YoKygjqkLpTHqcAq0zKLjior+ee2tRBx/3RSf1+OHxiC9Y6NstshQpvB1XHqTw9n7+f0+MsRJZrp0g==}
     engines: {node: '>= 18'}
     peerDependencies:
-      '@redis/client': ^5.6.0
+      '@redis/client': ^5.6.1
+
+  '@redis/time-series@5.6.1':
+    resolution: {integrity: sha512-sd3q4jMJdoSO2akw1L9NrdFI1JJ6zeMgMUoTh4a34p9sY3AnOI4aDLCecy8L2IcPAP1oNR3TbLFJiCJDQ35QTA==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      '@redis/client': ^5.6.1
 
   '@rollup/plugin-alias@5.1.1':
     resolution: {integrity: sha512-PR9zDb+rOzkRb2VD+EuKB7UC41vU5DIwZ5qqCpk0KJudcWAyi8rvYOhS7+L5aZCspw1stTViLgN5v6FF1p5cgQ==}
@@ -2820,8 +2820,8 @@ packages:
     resolution: {integrity: sha512-57frrGM/OCTLqLOAh0mhVA9VBMHd+9U7Zb2THMGdBUoZVOtGbJzjxsYGDJ3A9AYYCP4hn6y1TVbaOfzWtm5GFg==}
     engines: {node: '>= 12.13.0'}
 
-  redis@5.6.0:
-    resolution: {integrity: sha512-0x3pM3SlYA5azdNwO8qgfMBzoOqSqr9M+sd1hojbcn0ZDM5zsmKeMM+zpTp6LIY+mbQomIc/RTTQKuBzr8QKzQ==}
+  redis@5.6.1:
+    resolution: {integrity: sha512-O9DwAvcBm/lrlkGE0A6gNBtUdA8J9oD9njeLYlLzmm+MGTR7nd7VkpspfXqeXFg3gm89zldDqckyaHhXfhY80g==}
     engines: {node: '>= 18'}
 
   regex-recursion@5.1.1:
@@ -3672,7 +3672,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mastra/memory@0.11.4(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(react@19.1.0)':
+  '@mastra/memory@0.11.5(@mastra/core@0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76))(react@19.1.0)':
     dependencies:
       '@mastra/core': 0.10.15(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.76)
       '@upstash/redis': 1.35.1
@@ -3683,7 +3683,7 @@ snapshots:
       pg: 8.16.3
       pg-pool: 3.10.1(pg@8.16.3)
       postgres: 3.4.7
-      redis: 5.6.0
+      redis: 5.6.1
       xxhash-wasm: 1.1.0
       zod: 3.25.76
       zod-to-json-schema: 3.24.6(zod@3.25.76)
@@ -5062,25 +5062,25 @@ snapshots:
 
   '@protobufjs/utf8@1.1.0': {}
 
-  '@redis/bloom@5.6.0(@redis/client@5.6.0)':
+  '@redis/bloom@5.6.1(@redis/client@5.6.1)':
     dependencies:
-      '@redis/client': 5.6.0
+      '@redis/client': 5.6.1
 
-  '@redis/client@5.6.0':
+  '@redis/client@5.6.1':
     dependencies:
       cluster-key-slot: 1.1.2
 
-  '@redis/json@5.6.0(@redis/client@5.6.0)':
+  '@redis/json@5.6.1(@redis/client@5.6.1)':
     dependencies:
-      '@redis/client': 5.6.0
+      '@redis/client': 5.6.1
 
-  '@redis/search@5.6.0(@redis/client@5.6.0)':
+  '@redis/search@5.6.1(@redis/client@5.6.1)':
     dependencies:
-      '@redis/client': 5.6.0
+      '@redis/client': 5.6.1
 
-  '@redis/time-series@5.6.0(@redis/client@5.6.0)':
+  '@redis/time-series@5.6.1(@redis/client@5.6.1)':
     dependencies:
-      '@redis/client': 5.6.0
+      '@redis/client': 5.6.1
 
   '@rollup/plugin-alias@5.1.1(rollup@4.44.2)':
     optionalDependencies:
@@ -6459,13 +6459,13 @@ snapshots:
 
   real-require@0.2.0: {}
 
-  redis@5.6.0:
+  redis@5.6.1:
     dependencies:
-      '@redis/bloom': 5.6.0(@redis/client@5.6.0)
-      '@redis/client': 5.6.0
-      '@redis/json': 5.6.0(@redis/client@5.6.0)
-      '@redis/search': 5.6.0(@redis/client@5.6.0)
-      '@redis/time-series': 5.6.0(@redis/client@5.6.0)
+      '@redis/bloom': 5.6.1(@redis/client@5.6.1)
+      '@redis/client': 5.6.1
+      '@redis/json': 5.6.1(@redis/client@5.6.1)
+      '@redis/search': 5.6.1(@redis/client@5.6.1)
+      '@redis/time-series': 5.6.1(@redis/client@5.6.1)
 
   regex-recursion@5.1.1:
     dependencies:
